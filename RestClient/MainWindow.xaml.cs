@@ -33,12 +33,21 @@ namespace RestClient
             WebClient wc = new WebClient();
             wc.BaseAddress = "http://localhost:62349/api/";
             var result = wc.DownloadString("Values");
-            this.DataContext = result;
+            //this.DataContext = result;
+            MessageBox.Show(result);
         }
 
         private void button_Serialize_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void button_RestSharp_Click(object sender, RoutedEventArgs e)
+        {
+            RestSharp.RestClient rc = new RestSharp.RestClient("http://localhost:62349/api/");
+            RestSharp.RestRequest req = new RestSharp.RestRequest("Values");
+            RestSharp.IRestResponse  result = rc.Execute(req);
+            valueList.ItemsSource = result.Content.ToList();
         }
     }
 }

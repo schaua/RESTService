@@ -10,6 +10,7 @@
         <Button x:Name="button" Content="Get Data" HorizontalAlignment="Left" VerticalAlignment="Top" Width="104" Margin="27,20,0,0" Click="button_Click" Height="43"/>
         <ListBox x:Name="valueList" HorizontalAlignment="Left" Height="245" VerticalAlignment="Top" Width="231" Margin="171,20,0,0"/>
         <Button x:Name="button1" Content="Get JSON" Margin="27,68,387.667,204.667" Click="button_Serialize_Click"/>
+        <Button x:Name="button2" Content="Get REST#" Margin="27,121,387.667,151.667" Click="button_RestSharp_Click"/>
 
     </Grid>
 </Window>
